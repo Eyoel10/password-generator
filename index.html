@@ -1,9 +1,61 @@
+<!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1></h1>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <title>Random Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a</h1>
+      <h1 id="rndpsd-el">random password</h1>
+      <h4 class="comment">Never use an insecure password again.</h4>
+      <div class="product">
+        <h4 class="mar0 psdlen">Password Length:</h4>
+        <button class="mar0 green-btn" id="minus-el" onclick="subLen()">
+          -
+        </button>
+        <h4 class="mar0 psdlen" id="amount-el">7</h4>
+        <button class="mar0 green-btn" id="plus-el" onclick="addLen()">
+          +
+        </button>
+      </div>
+      <div class="settings">
+        <h4 class="mar0 psdlen">Numbers:</h4>
+        <button class="mar0 green-btn" id="numyes-el" onclick="numStatus()">
+          YES
+        </button>
+      </div>
+      <div class="settings">
+        <h4 class="mar0 psdlen">Symbols:</h4>
+        <button class="mar0 green-btn" id="symyes-el" onclick="symStatus()">
+          YES
+        </button>
+      </div>
+      <button class="green-btn" id="btn-el" onclick="generate2Password()">
+        Generate passwords
+      </button>
+      <hr />
+      <div class="product">
+        <button class="answer" id="ans1-el" onclick="copyAns1()"></button>
+        <button class="answer" id="ans2-el" onclick="copyAns2()"></button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
